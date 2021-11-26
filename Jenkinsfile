@@ -15,7 +15,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                withMaven() {
+                    sh 'docker cp ~/target/customer-service-0.0.1.jar bold_clarke:/usr/local/tomcat/webapps'
+                }
             }
         }
     }
