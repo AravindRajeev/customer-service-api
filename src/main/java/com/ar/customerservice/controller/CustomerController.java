@@ -14,10 +14,6 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @PostMapping("/addCustomer")
-    public Customer addCustomer(@RequestBody Customer customer){
-        return customerService.saveCustomer(customer);
-    }
 
     @GetMapping("/getCustomer/{customerId}")
     public Customer getCustomer(@PathVariable Long customerId){
