@@ -7,6 +7,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application'
+                withMaven() {
+                    'mvn clean package'
+                }
             }
         }
 
