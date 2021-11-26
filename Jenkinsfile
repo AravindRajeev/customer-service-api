@@ -18,8 +18,7 @@ pipeline {
             steps {
                 withMaven() {
                     sh 'ls'
-                    sh 'sudo usermod -aG docker ${USER}'
-                    sh 'su -i ${USER}'
+                    sh 'sudo usermod -a -G docker ${USER}'
                     sh 'docker cp target/customer-service-0.0.1.jar reverent_thompson:/usr/local/tomcat/webapps'
                 }
             }
