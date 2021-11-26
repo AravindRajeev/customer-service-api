@@ -13,11 +13,6 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer saveCustomer(Customer customer) {
-        return customerRepository.save(customer.convertToEntity()).convertToModel();
-    }
-
-    @Override
     public Customer getCustomer(Long customerId) {
         return customerRepository.findById(customerId).orElseThrow(() -> new RuntimeException("Customer Id Not Found")).convertToModel();
     }
