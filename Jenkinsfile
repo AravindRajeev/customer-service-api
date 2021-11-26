@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools{
-        maven
+        maven 'Maven'
     }
     stages {
         stage('Build') {
             steps {
-
+                echo 'Building application'
             }
         }
 
