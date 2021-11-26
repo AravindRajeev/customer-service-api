@@ -18,7 +18,7 @@ pipeline {
             steps {
                 withMaven() {
                     sh 'ls'
-                    sh 'docker cp ~workspace/target/customer-service-0.0.1.jar reverent_thompson:/usr/local/tomcat/webapps'
+                    sh 'docker cp target/customer-service-0.0.1.jar reverent_thompson:/usr/local/tomcat/webapps'
                 }
             }
         }
