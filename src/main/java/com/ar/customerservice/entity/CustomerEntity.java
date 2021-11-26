@@ -2,16 +2,10 @@ package com.ar.customerservice.entity;
 
 import com.ar.customerservice.model.Customer;
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Data
-@Entity
-@Table(name = "Customer")
 public class CustomerEntity {
 
-    @Id
     private Long customerId;
 
     private String customerName;
