@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building application'
                 withMaven() {
-                    'mvn clean package'
+                    bat'mvn clean package'
                 }
             }
         }
